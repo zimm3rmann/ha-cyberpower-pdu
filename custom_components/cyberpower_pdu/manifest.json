@@ -1,0 +1,13 @@
+{
+  "domain": "cyberpower_pdu",
+  "name": "CyberPower PDU",
+  "after_dependencies": [],
+  "codeowners": ["@zimm3rmann"],
+  "config_flow": true,
+  "documentation": "https://github.com/zimm3rmann/ha-cyberpower-pdu",
+  "integration_type": "device",
+  "iot_class": "local_polling",
+  "issue_tracker": "https://github.com/zimm3rmann/ha-cyberpower-pdu/issues",
+  "requirements": ["pysnmp==7.1.22"],
+  "version": "0.1.0"
+}

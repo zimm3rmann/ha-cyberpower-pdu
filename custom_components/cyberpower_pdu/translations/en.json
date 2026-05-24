@@ -1,0 +1,61 @@
+{
+  "config": {
+    "step": {
+      "user": {
+        "title": "CyberPower PDU",
+        "description": "Configure the SNMP endpoint.",
+        "data": {
+          "host": "Host",
+          "port": "Port",
+          "snmp_version": "SNMP version"
+        }
+      },
+      "v3": {
+        "title": "SNMPv3 credentials",
+        "description": "Use a CyberPower SNMPv3 user with read and write access.",
+        "data": {
+          "username": "Username",
+          "auth_protocol": "Authentication protocol",
+          "auth_key": "Authentication passphrase",
+          "privacy_protocol": "Privacy protocol",
+          "privacy_key": "Privacy passphrase",
+          "context_name": "Context name",
+          "timeout": "Timeout",
+          "retries": "Retries",
+          "scan_interval": "Scan interval"
+        }
+      },
+      "community": {
+        "title": "SNMP community",
+        "description": "Use a read/write community so Home Assistant can switch outlets.",
+        "data": {
+          "community": "Community",
+          "timeout": "Timeout",
+          "retries": "Retries",
+          "scan_interval": "Scan interval"
+        }
+      }
+    },
+    "error": {
+      "cannot_connect": "Unable to connect to the PDU with these SNMP settings.",
+      "missing_username": "Enter an SNMPv3 username.",
+      "missing_community": "Enter an SNMP community.",
+      "auth_key_length": "Authentication passphrase must be 8 to 32 characters.",
+      "privacy_key_length": "Privacy passphrase must be 8 to 32 characters.",
+      "privacy_requires_auth": "Privacy requires an authentication protocol."
+    },
+    "abort": {
+      "already_configured": "This PDU is already configured."
+    }
+  },
+  "options": {
+    "step": {
+      "init": {
+        "title": "CyberPower PDU options",
+        "data": {
+          "scan_interval": "Scan interval"
+        }
+      }
+    }
+  }
+}
